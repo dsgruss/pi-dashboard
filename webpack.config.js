@@ -1,9 +1,9 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: './src/dashboard.js',
+  entry: "./src/dashboard.js",
   output: {
-    filename: 'dashboard.js',
-    path: path.resolve(__dirname, 'public/javascripts'),
-  },
+    filename: "dashboard.js",
+    path: path.resolve(__dirname, "public/javascripts")
+  }
 };
