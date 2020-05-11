@@ -223,7 +223,7 @@ $(document).ready(function() {
     var net_Out = new Array();
     for(i=0;i<init_vals.net.count;i++)
     {
-        var chartNetInterface = Highcharts.chart('container-net-interface-'+(i+1), {
+        var chartNetInterface = Highcharts.chart('container-net-interface-' + i, {
             title: {
                 text: ''
             },
@@ -270,7 +270,7 @@ $(document).ready(function() {
 
     setInterval(function() {
 
-        $.getJSON('?ajax=true', function(data){
+        $.getJSON('/device', function(data){
 
             //console.log(data);
             var newDate = new Date();
@@ -301,8 +301,8 @@ $(document).ready(function() {
 
             for(i=0;i<data.net.count;i++)
             {
-                $("#net-interface-"+(i+1)+"-total-in").text(bytesRound(parseInt(data.net.interfaces[i].total_in), 2));
-                $("#net-interface-"+(i+1)+"-total-out").text(bytesRound(parseInt(data.net.interfaces[i].total_out), 2));
+                $("#net-interface-"+(i)+"-total-in").text(bytesRound(parseInt(data.net.interfaces[i].total_in), 2));
+                $("#net-interface-"+(i)+"-total-out").text(bytesRound(parseInt(data.net.interfaces[i].total_out), 2));
             }
 
 
