@@ -1,5 +1,5 @@
 # Pi Dashboard
-A WebUI dashboard for IoT devices likes raspberry pi.
+A WebUI dashboard for IoT devices like raspberry pi.
 
 This fork is a learning exercise for rewriting the backend using node.
 
