@@ -1,3 +1,9 @@
+var $ = require( "jquery" );
+var Highcharts = require('highcharts');
+require('highcharts/highcharts-more')(Highcharts);
+require('highcharts/modules/solid-gauge')(Highcharts);
+require('highcharts/modules/exporting')(Highcharts);
+import 'bootstrap';
 /*!
  * Pi Dashboard (http://www.nxez.com)
  * Copyright 2017 NXEZ.com.
@@ -221,7 +227,7 @@ $(document).ready(function() {
     var chartNetInterfaces = new Array();
     var net_In = new Array();
     var net_Out = new Array();
-    for(i=0;i<init_vals.net.count;i++)
+    for(var i=0;i<init_vals.net.count;i++)
     {
         var chartNetInterface = Highcharts.chart('container-net-interface-' + i, {
             title: {
@@ -377,8 +383,8 @@ $(document).ready(function() {
                     }
                 }
 
-                idle_diff = parseInt(window.dashboard.cpu.stat.idle) - parseInt(window.dashboard_old.cpu.stat.idle);
-                used_total = parseInt(window.dashboard.cpu.stat.idle) +
+                var idle_diff = parseInt(window.dashboard.cpu.stat.idle) - parseInt(window.dashboard_old.cpu.stat.idle);
+                var used_total = parseInt(window.dashboard.cpu.stat.idle) +
                     parseInt(window.dashboard.cpu.stat.user) +
                     parseInt(window.dashboard.cpu.stat.sys) +
                     parseInt(window.dashboard.cpu.stat.nice) +
