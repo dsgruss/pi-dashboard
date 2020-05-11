@@ -1,6 +1,8 @@
 {
   "name": "pi-dashboard",
   "version": "1.1.1",
+  "description": "A WebUI dashboard for IoT devices like raspberry pi.",
+  "license": "GPL-3.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
